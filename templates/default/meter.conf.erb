@@ -1,0 +1,20 @@
+{
+  "debug":0,
+  "metermgr":{
+    "org_id":"<%= node[:boundary][:api][:org_id]%>",
+    "api_key":"<%= node[:boundary][:api][:key] %>"
+  },
+  "stun":{
+    "server":"stun.l.google.com",
+    "port":19302,
+    "enable":false
+  },
+  "tls":{
+    "skip_validation":false
+  },
+  "collector":{
+    "collectors":[
+      "tls:\/\/<%= node[:boundary][:meter][:collector][:hostname] %>:4740,443"
+    ]
+  }
+}
