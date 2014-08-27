@@ -6,3 +6,5 @@ default[:boundary][:meter][:collector][:port] = "4740"
 default[:boundary][:meter][:tags] = []
 
 default[:boundary][:meter][:interfaces] = nil
+
+default[:boundary][:meter][:enabled] = true
