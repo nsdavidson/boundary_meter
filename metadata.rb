@@ -7,3 +7,4 @@ long_description 'Installs/Configures boundary_meter'
 version          '0.1.0'
 
 depends 'chef-sugar'
+depends 'yum', '> 3.0'
