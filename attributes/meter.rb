@@ -10,3 +10,4 @@ default[:boundary][:meter][:interfaces] = nil
 default[:boundary][:meter][:enabled] = true
 
 default[:boundary][:meter][:yum][:url] = 'https://yum.boundary.com'
+default[:boundary][:meter][:apt][:url] = 'https://apt.boundary.com'
