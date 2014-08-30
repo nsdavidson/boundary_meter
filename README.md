@@ -36,6 +36,10 @@ A cookbook to install and configure the Bounday meter (http://www.boundary.com)
   </tr>
 </table>
 
+| Key | Type | Description | Default |
+|-----|------|-------------|---------|
+|Test | Testing |
+
 ## Usage
 
 ### boundary_meter::default
