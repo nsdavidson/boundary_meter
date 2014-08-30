@@ -9,37 +9,12 @@ A cookbook to install and configure the Bounday meter (http://www.boundary.com)
 
 ## Attributes
 
-<table>
-  <tr>
-    <th>Key</th>
-    <th>Type</th>
-    <th>Description</th>
-    <th>Default</th>
-  </tr>
-  <tr>
-    <td><tt>[:boundary][:api][:hostname]</tt></td>
-    <td>Hostname</td>
-    <td>Hostname of the node being monitored</td>
-    <td><tt>node[:fqdn]</tt></td>
-  </tr>
-  <tr>
-    <td><tt>[:boundary][:api][:org_id]</tt></td>
-    <td>Organization ID</td>
-    <td>Boundary organization ID</td>
-    <td><tt>org_id</tt></td>
-  </tr>
-  <tr>
-    <td><tt>[:boundary][:api][:key]</tt></td>
-    <td>API Key</td>
-    <td>Boundary API Key</td>
-    <td><tt>api_key</tt></td>
-  </tr>
-</table>
-
 | Key | Type | Description | Default |
 |-----|------|-------------|---------|
-|[:boundary][:api][:hostname] | Hostname | Hostname of the node | node[:fqdn] |
-|[:boundary][:api][:org_id] | Organization ID | Boundary organization ID | org_id |
+|[:boundary][:api][:hostname] | string | Hostname of the API server | api.boundary.com |
+|[:boundary][:api][:org_id] | string | Boundary organization ID | org_id |
+|[:boundary][:api][:key] | string | Boundary API key | "api_key" |
+|[:boundary][:hostname] | string | Hostname of the node | node[:fqdn] |
 
 ## Usage
 
