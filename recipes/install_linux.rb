@@ -1,6 +1,6 @@
 etc_path = node[:boundary][:meter][:etc_path]
 
-directory "#{etc_path}"
+directory etc_path}
 template "#{etc_path}/meter.conf" do
   source 'meter.conf.erb'
   mode 600
