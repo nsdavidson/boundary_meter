@@ -1,6 +1,8 @@
 
 
-# boundary_meter-cookbook     [![Build Status](https://travis-ci.org/nsdavidson/boundary_meter.svg?branch=master)](https://travis-ci.org/nsdavidson/boundary_meter)
+# boundary_meter-cookbook
+============================
+[![Build Status](https://travis-ci.org/nsdavidson/boundary_meter.svg?branch=master)](https://travis-ci.org/nsdavidson/boundary_meter)
 
 A cookbook to install and configure the Bounday meter (http://www.boundary.com)
 
@@ -17,6 +19,7 @@ A cookbook to install and configure the Bounday meter (http://www.boundary.com)
 |[:boundary][:api][:org_id] | string | Boundary organization ID | org_id |
 |[:boundary][:api][:key] | string | Boundary API key | "api_key" |
 |[:boundary][:hostname] | string | Hostname of the node | node[:fqdn] |
+|[:boundary][:meter][:bin_path]| string | Path to boundary-meter binary | /usr/bin
 
 ## Usage
 
