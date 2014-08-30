@@ -18,7 +18,15 @@ A cookbook to install and configure the Boundary meter (http://www.boundary.com)
 |[:boundary][:api][:org_id] | string | Boundary organization ID | org_id |
 |[:boundary][:api][:key] | string | Boundary API key | "api_key" |
 |[:boundary][:hostname] | string | Hostname of the node | node[:fqdn] |
-|[:boundary][:meter][:bin_path]| string | Path to boundary-meter binary | /usr/bin
+|[:boundary][:meter][:bin_path] | string | Path to boundary-meter binary | /usr/bin |
+|[:boundary][:meter][:etc_path] | string | Path to boundary-meter config | /etc/boundary |
+|[:boundary][:meter][:collector][:hostname] | string | Path to Boundary collector | collector.boundary.com |
+|[:boundary][:meter][:collector][:port] | string | Boundary collector port | 4740 |
+|[:boundary][:meter][:tags] | string[] | Array of tags for Boundary | [] |
+|[:boundary][:meter][:enabled] | boolean | Enables/disables boundary-meter | true |
+|[:boundary][:meter][:yum][:url] | string | URL for Boundary yum repo | https://yum.boundary.com
+|[:boundary][:meter][:apt][:url] | string | URL for Boundary apt repo | https://apt.boundary.com
+
 
 ## Usage
 

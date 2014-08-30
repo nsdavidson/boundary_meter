@@ -1,9 +1,7 @@
-# 0.1.0
+v0.2.1
+------
+- Added rest of attributes to README
 
-Initial release of boundary_meter
-
-* Enhancements
-  * an enhancement
-
-* Bug Fixes
-  * a bug fix
+v0.2.0
+------
+- Initial release
