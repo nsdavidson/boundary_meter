@@ -16,8 +16,18 @@ bash 'provision' do
     ./boundary-meter-provision -i #{install_token}
     EOH
   not_if { ::File.exist?("#{etc_path}/key.pem") }
+  notifies :run, "bash[tag]", :delayed
 end
 
 service 'boundary-meter' do
   action [:enable, :start]
+end
+
+tags = node[:boundary][:meter][:tags].join(",")
+bash 'tag' do
+  cwd node[:boundary][:meter][:bin_path]
+  code <<-EOH
+    ./boundary-meter -p #{install_token} -o #{tags}
+    EOH
+  action :nothing
 end

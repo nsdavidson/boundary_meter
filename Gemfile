@@ -16,6 +16,8 @@ gem 'berkshelf'
 
 gem 'test-kitchen'
 gem 'kitchen-vagrant'
+gem 'vagrant-wrapper'
+gem 'kitchen-ec2'
 gem 'chefspec'
 gem 'rubocop'
 gem 'chef-sugar'
