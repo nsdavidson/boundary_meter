@@ -1,6 +1,6 @@
-[![Build Status](https://travis-ci.org/nsdavidson/boundary_meter.svg?branch=master)](https://travis-ci.org/nsdavidson/boundary_meter)
 
-# boundary_meter-cookbook
+
+# boundary_meter-cookbook     [![Build Status](https://travis-ci.org/nsdavidson/boundary_meter.svg?branch=master)](https://travis-ci.org/nsdavidson/boundary_meter)
 
 A cookbook to install and configure the Bounday meter (http://www.boundary.com)
 
