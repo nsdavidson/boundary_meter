@@ -38,7 +38,8 @@ A cookbook to install and configure the Bounday meter (http://www.boundary.com)
 
 | Key | Type | Description | Default |
 |-----|------|-------------|---------|
-|Test | Testing |
+|[:boundary][:api][:hostname] | Hostname | Hostname of the node | node[:fqdn] |
+|[:boundary][:api][:org_id] | Organization ID | Boundary organization ID | org_id |
 
 ## Usage
 
