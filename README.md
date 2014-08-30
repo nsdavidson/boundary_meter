@@ -20,7 +20,19 @@ A cookbook to install and configure the Bounday meter (http://www.boundary.com)
     <td><tt>[:boundary][:api][:hostname]</tt></td>
     <td>Hostname</td>
     <td>Hostname of the node being monitored</td>
-    <td><tt>node[:fqnd]</tt></td>
+    <td><tt>node[:fqdn]</tt></td>
+  </tr>
+  <tr>
+    <td><tt>[:boundary][:api][:org_id]</tt></td>
+    <td>Organization ID</td>
+    <td>Boundary organization ID</td>
+    <td><tt>org_id</tt></td>
+  </tr>
+  <tr>
+    <td><tt>[:boundary][:api][:key]</tt></td>
+    <td>API Key</td>
+    <td>Boundary API Key</td>
+    <td><tt>api_key</tt></td>
   </tr>
 </table>
 
