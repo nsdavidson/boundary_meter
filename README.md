@@ -1,10 +1,11 @@
 # boundary_meter-cookbook
 
-TODO: Enter the cookbook description here.
+A cookbook to install and configure the Bounday meter (http://www.boundary.com)
 
 ## Supported Platforms
 
-TODO: List your supported platforms.
+- RHEL (and variants)
+- Ubuntu
 
 ## Attributes
 
@@ -16,10 +17,10 @@ TODO: List your supported platforms.
     <th>Default</th>
   </tr>
   <tr>
-    <td><tt>['boundary_meter']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
+    <td><tt>[:boundary][:api][:hostname]</tt></td>
+    <td>Hostname</td>
+    <td>Hostname of the node being monitored</td>
+    <td><tt>node[:fqnd]</tt></td>
   </tr>
 </table>
 
