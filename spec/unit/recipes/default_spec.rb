@@ -4,33 +4,35 @@ require 'fauxhai'
 
 describe 'boundary_meter::default' do
   # Setup chef run with Boundary enabled
-  let(:chef_run_enabled) do
-    ChefSpec::Runner.new(platform: 'redhat', version: '6.4') do |node|
-      node.automatic['boundary']['meter']['enabled'] = true
-    end.converge(described_recipe)
-  end
-
-  let(:chef_run_disabled) do
-    ChefSpec::Runner.new(platform: 'redhat', version: '6.4') do |node|
-      node.automatic['boundary']['meter']['enabled'] = false
-    end.converge(described_recipe)
-  end
-
-  # Stub out provisioning
-  before do
-    stub_command("./boundary-meter-provision -i dummy_token").and_return(1)
+  let(:chef_run) do
+    ChefSpec::Runner.new.converge(described_recipe)
   end
 
   # Tests for recipe inclusion
-  it 'install chef-sugar' do
-    expect(chef_run_enabled).to include_recipe('chef-sugar::default')
+  it 'should install chef-sugar' do
+    expect(chef_run).to include_recipe('chef-sugar::default')
   end
 
-  it 'should install Boundary if enabled' do
-    expect(chef_run_enabled).to include_recipe('boundary_meter::install')
+  context 'Boundary enabled' do
+    let(:chef_run) do
+      ChefSpec::Runner.new do |node|
+        node.automatic['boundary']['meter']['enabled'] = true
+      end.converge(described_recipe)
+    end
+    it 'should include install if enabled' do
+      expect(chef_run).to include_recipe('boundary_meter::install')
+    end
   end
 
-  it 'should disable Boundary if disabled' do
-    expect(chef_run_disabled).to include_recipe('boundary_meter::disable')
+  context 'Boundary disabled' do
+    let(:chef_run) do
+      ChefSpec::Runner.new do |node|
+        node.automatic['boundary']['meter']['enabled'] = false
+      end.converge(described_recipe)
+    end
+
+    it 'should disable Boundary if disabled' do
+      expect(chef_run).to include_recipe('boundary_meter::disable')
+    end
   end
 end
