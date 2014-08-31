@@ -10,6 +10,6 @@ depends 'chef-sugar'
 depends 'yum', '> 3.0'
 depends 'apt'
 
-%{ amazon redhat centos scientific fedora ubuntu}.each do |os|
+%w{ amazon redhat centos scientific fedora ubuntu }.each do |os|
   supports os
 end
