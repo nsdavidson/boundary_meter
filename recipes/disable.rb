@@ -1,3 +1,3 @@
 service 'boundary-meter' do
- action [:stop, :disable]
+  action [:stop, :disable]
 end
