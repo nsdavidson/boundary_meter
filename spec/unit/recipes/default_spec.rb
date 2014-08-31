@@ -2,6 +2,8 @@ require 'chefspec'
 require 'chefspec/berkshelf'
 require 'fauxhai'
 
+ChefSpec::Coverage.start!
+
 describe 'boundary_meter::default' do
   # Setup chef run with Boundary enabled
   let(:chef_run) do
