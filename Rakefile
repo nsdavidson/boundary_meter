@@ -16,4 +16,4 @@ task :chefspec do
   sh 'rspec spec/** --color'
 end
 
-task :test => [:foodcritic]
+task :test => [:foodcritic, :chefspec]
