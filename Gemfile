@@ -14,6 +14,13 @@ gem 'berkshelf'
 #   gem "vagrant-omnibus", github: "schisamo/vagrant-omnibus"
 # end
 
+group :development do
+  gem 'guard'
+  gem 'guard-foodcritic'
+  gem 'ruby_gntp'
+  gem 'guard-rspec'
+end
+
 gem 'test-kitchen'
 gem 'kitchen-vagrant'
 gem 'vagrant-wrapper'
