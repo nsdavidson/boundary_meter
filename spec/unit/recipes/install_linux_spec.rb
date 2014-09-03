@@ -9,6 +9,7 @@ describe 'boundary_meter::install_linux' do
         node.set[:boundary][:meter][:bin_path] = '/usr/bin'
         node.set[:boundary][:api][:org_id] = 'test123'
         node.set[:boundary][:api][:key] = "supersecretkey"
+        node.set[:boundary][:meter][:tags] = ["mytag"]
     end.converge(described_recipe)
   end
 
