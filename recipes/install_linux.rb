@@ -15,7 +15,7 @@ bash 'provision' do
   code <<-EOH
     ./boundary-meter-provision -i #{install_token}
     EOH
-  not_if { ::File.exist?("#{etc_path}/key.pem") || node[:boundary][:meter][:tags].empty?}
+  not_if { ::File.exist?("#{etc_path}/key.pem") }
   notifies :run, "bash[tag]", :delayed
 end
 
@@ -30,4 +30,5 @@ bash 'tag' do
     ./boundary-meter -p #{install_token} -o #{tags}
     EOH
   action :nothing
+  not_if { node[:boundary][:meter][:tags].empty? }
 end

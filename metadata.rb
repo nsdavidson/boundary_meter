@@ -4,7 +4,7 @@ maintainer_email 'nolan.davidson@gmail.com'
 license          'MIT'
 description      'Installs/Configures boundary_meter'
 long_description 'Installs/Configures boundary_meter'
-version          '0.2.3'
+version          '0.2.4'
 
 depends 'chef-sugar'
 depends 'yum', '> 3.0'
